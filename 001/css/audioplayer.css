@@ -201,13 +201,13 @@
 						.audioplayer-volume-button a
 						{
 							width: 0.313em; /* 5 */
-							height: 0.375em; /* 6 */
+							height: 0em; /* 6 */
 							background-color: #fff;
 							display: block;
 							position: relative;
 							z-index: 1;
-							top: 40%;
-							left: 35%;
+							top: 22%;
+							left: 25%;
 						}
 							.audioplayer-volume-button a:before,
 							.audioplayer-volume-button a:after
