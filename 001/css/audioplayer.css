@@ -201,12 +201,11 @@
 						.audioplayer-volume-button a
 						{
 							width: 0.313em; /* 5 */
-							height: 0em; /* 6 */
 							background-color: #fff;
 							display: block;
 							position: relative;
 							z-index: 1;
-							top: 22%;
+							top: 25%;
 							left: 25%;
 						}
 							.audioplayer-volume-button a:before,
@@ -229,12 +228,12 @@
 							}
 							.audioplayer:not(.audioplayer-muted) .audioplayer-volume-button a:after
 							{
-								width: 1.5em; /* 5 */
-								height: 1.5em; /* 5 */
+								width: 0.5em; /* 5 */
+								height: 0.5em; /* 5 */
 								border: 0.5em double #4C4C4C; /* 4 */
 								border-width: 1em 1em 0 0; /* 4 */
-								left: 0.563em; /* 9 */
-								top: -0.063em; /* 1 */
+								left: 0.5em; /* 9 */
+								top: 0.5em; /* 1 */
 								-webkit-border-radius: 0 0.938em 0 0; /* 15 */
 								-moz-border-radius: 0 0.938em 0 0; /* 15 */
 								border-radius: 0 0.938em 0 0; /* 15 */
