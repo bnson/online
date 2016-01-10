@@ -112,7 +112,7 @@
 					height: 100%;
 					line-height: 1.8em; /* 38 */
 					text-align: center;
-					z-index: 2;
+					z-index: 0;
 					top: 0;
 				}
 					.audioplayer-time-current
