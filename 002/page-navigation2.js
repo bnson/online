@@ -19,38 +19,38 @@
         if (lastPageNo - 1 == pageInfo / perPage) lastPageNo = lastPageNo - 1;
         pageEnd = pageStart + numPages - 1;
         if (pageEnd > lastPageNo) pageEnd = lastPageNo;
-        html += "<span class='showpageOf'>Page " + currentPageNo + ' of ' + lastPageNo + "</span>";
+        html += "<div class='showpageOf'>Page " + currentPageNo + ' of ' + lastPageNo + "</div>";
         var prevNumber = parseInt(currentPageNo) - 1;
       
 		//Iccsi was here, doing magic      
         if (currentPageNo > 1) {
 			if (currentPage == "page") {
-			  html += '<span class="showpage firstpage"><a href="' + home_page + '">' + firstText + '</a></span>'
+			  html += '<div class="showpage firstpage"><a href="' + home_page + '">' + firstText + '</a></div>'
 			} else {
-			  html += '<span class="displaypageNum firstpage"><a href="/search/label/' + postLabel + '?&max-results=' + perPage + '">' + firstText + '</a></span>'
+			  html += '<div class="displaypageNum firstpage"><a href="/search/label/' + postLabel + '?&max-results=' + perPage + '">' + firstText + '</a></div>'
 			}
 		}
 		
 		if (currentPageNo > 2) {
             if (currentPageNo == 3) { 
                 if (currentPage == "page") {
-                    html += '<span class="showpage"><a href="' + home_page + '">' + prevText + '</a></span>'
+                    html += '<div class="showpage"><a href="' + home_page + '">' + prevText + '</a></div>'
                 } else {
-                    html += '<span class="displaypageNum"><a href="/search/label/' + postLabel + '?&max-results=' + perPage + '">' + prevText + '</a></span>'
+                    html += '<div class="displaypageNum"><a href="/search/label/' + postLabel + '?&max-results=' + perPage + '">' + prevText + '</a></div>'
                 }
             } else {
                 if (currentPage == "page") {
-                    html += '<span class="displaypageNum"><a href="#" onclick="redirectpage(' + prevNumber + ');return false">' + prevText + '</a></span>'
+                    html += '<div class="displaypageNum"><a href="#" onclick="redirectpage(' + prevNumber + ');return false">' + prevText + '</a></div>'
                 } else {
-                    html += '<span class="displaypageNum"><a href="#" onclick="redirectlabel(' + prevNumber + ');return false">' + prevText + '</a></span>'
+                    html += '<div class="displaypageNum"><a href="#" onclick="redirectlabel(' + prevNumber + ');return false">' + prevText + '</a></div>'
                 }
             }
         }
         if (pageStart > 1) {
             if (currentPage == "page") {
-                html += '<span class="displaypageNum"><a href="' + home_page + '">1</a></span>'
+                html += '<div class="displaypageNum"><a href="' + home_page + '">1</a></div>'
             } else {
-                html += '<span class="displaypageNum"><a href="/search/label/' + postLabel + '?&max-results=' + perPage + '">1</a></span>'
+                html += '<div class="displaypageNum"><a href="/search/label/' + postLabel + '?&max-results=' + perPage + '">1</a></div>'
             }
         }
         if (pageStart > 2) {
@@ -58,29 +58,29 @@
         }
         for (var jj = pageStart; jj <= pageEnd; jj++) {
             if (currentPageNo == jj) {
-                html += '<span class="pagecurrent">' + jj + '</span>'
+                html += '<div class="pagecurrent">' + jj + '</div>'
             } else if (jj == 1) {
                 if (currentPage == "page") {
-                    html += '<span class="displaypageNum"><a href="' + home_page + '">1</a></span>'
+                    html += '<div class="displaypageNum"><a href="' + home_page + '">1</a></div>'
                 } else {
-                    html += '<span class="displaypageNum"><a href="/search/label/' + postLabel + '?&max-results=' + perPage + '">1</a></span>'
+                    html += '<div class="displaypageNum"><a href="/search/label/' + postLabel + '?&max-results=' + perPage + '">1</a></div>'
                 }
             } else {
                 if (currentPage == "page") {
-                    html += '<span class="displaypageNum"><a href="#" onclick="redirectpage(' + jj + ');return false">' + jj + '</a></span>'
+                    html += '<div class="displaypageNum"><a href="#" onclick="redirectpage(' + jj + ');return false">' + jj + '</a></div>'
                 } else {
-                    html += '<span class="displaypageNum"><a href="#" onclick="redirectlabel(' + jj + ');return false">' + jj + '</a></span>'
+                    html += '<div class="displaypageNum"><a href="#" onclick="redirectlabel(' + jj + ');return false">' + jj + '</a></div>'
                 }
             }
         }
         if (pageEnd < lastPageNo - 1) {
-            html += '...'
+            html += '<div> ... </div>'
         }
         if (pageEnd < lastPageNo) {
             if (currentPage == "page") {
-                html += '<span class="displaypageNum"><a href="#" onclick="redirectpage(' + lastPageNo + ');return false">' + lastPageNo + '</a></span>'
+                html += '<div class="displaypageNum"><a href="#" onclick="redirectpage(' + lastPageNo + ');return false">' + lastPageNo + '</a></div>'
             } else {
-                html += '<span class="displaypageNum"><a href="#" onclick="redirectlabel(' + lastPageNo + ');return false">' + lastPageNo + '</a></span>'
+                html += '<div class="displaypageNum"><a href="#" onclick="redirectlabel(' + lastPageNo + ');return false">' + lastPageNo + '</a></div>'
             }
         }
 
@@ -88,18 +88,18 @@
         var nextnumber = parseInt(currentPageNo) + 1;
         if (currentPageNo < (lastPageNo - 1)) {
             if (currentPage == "page") {
-                html += '<span class="displaypageNum"><a href="#" onclick="redirectpage(' + nextnumber + ');return false">' + nextText + '</a></span>'
+                html += '<div class="displaypageNum"><a href="#" onclick="redirectpage(' + nextnumber + ');return false">' + nextText + '</a></div>'
             } else {
-                html += '<span class="displaypageNum"><a href="#" onclick="redirectlabel(' + nextnumber + ');return false">' + nextText + '</a></span>'
+                html += '<div class="displaypageNum"><a href="#" onclick="redirectlabel(' + nextnumber + ');return false">' + nextText + '</a></div>'
             }
 		}
 		
 		if (currentPageNo < lastPageNo) {
 			//Iccsi was here, doing magic
 			if (currentPage == "page") {
-			  html += '<span class="displaypageNum lastpage"><a href="#" onclick="redirectpage(' + lastPageNo + ');return false">' + lastText + '</a></span>'
+			  html += '<div class="displaypageNum lastpage"><a href="#" onclick="redirectpage(' + lastPageNo + ');return false">' + lastText + '</a></div>'
 			} else {
-			  html += '<span class="displaypageNum lastpage"><a href="#" onclick="redirectlabel(' + lastPageNo + ');return false">' + lastText + '</a></span>'
+			  html += '<div class="displaypageNum lastpage"><a href="#" onclick="redirectlabel(' + lastPageNo + ');return false">' + lastText + '</a></div>'
 			}
         }
 
