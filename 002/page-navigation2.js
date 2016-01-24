@@ -54,7 +54,7 @@
             }
         }
         if (pageStart > 2) {
-            html += ' ... '
+            html += '<div style="padding: 10px 15px;"> ... </div>'
         }
         for (var jj = pageStart; jj <= pageEnd; jj++) {
             if (currentPageNo == jj) {
@@ -74,7 +74,7 @@
             }
         }
         if (pageEnd < lastPageNo - 1) {
-            html += '<div> ... </div>'
+            html += '<div style="padding: 10px 15px;"> ... </div>'
         }
         if (pageEnd < lastPageNo) {
             if (currentPage == "page") {
