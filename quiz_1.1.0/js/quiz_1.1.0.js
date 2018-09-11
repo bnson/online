@@ -21,6 +21,7 @@ function getScore() {
 	}			
 	
 	score = Math.round(score/quest.length*100);
+	$("#modal1Desc").html(score + "%")
 	$('[data-remodal-id=modal]').remodal();
 	
 }	
