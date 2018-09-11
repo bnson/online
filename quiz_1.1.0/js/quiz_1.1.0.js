@@ -21,9 +21,7 @@ function getScore() {
 	}			
 	
 	score = Math.round(score/quest.length*100);
-	alert("▬▬▬▬▬▬▬▬▬ஜ۩۞۩ஜ▬▬▬▬▬▬▬▬▬\n\n" 
-			+ "\t\t\t\t SCORE: " + score + "%"
-			+ "\n\n▬▬▬▬▬▬▬▬▬ஜ۩۞۩ஜ▬▬▬▬▬▬▬▬▬\n");
+	$('[data-remodal-id=modal]').remodal();
 	
 }	
 
