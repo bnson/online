@@ -6,7 +6,7 @@ set "source=C:\DuLieuGoc"
 set "output=InitStructure.cmd"
 
 :: === Danh sách phần mở rộng cần giữ (không có dấu chấm) ===
-set "extList=txt cpp md"
+set "extList=tscn png gd json"
 
 :: === Xóa file đầu ra nếu đã tồn tại ===
 if exist "%output%" del "%output%"
