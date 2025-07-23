@@ -1,0 +1,40 @@
+@echo off
+setlocal enabledelayedexpansion
+
+:: === Cấu hình ===
+set "source=C:\DuLieuGoc"
+set "output=InitStructure.cmd"
+
+:: === Danh sách phần mở rộng cần giữ (không có dấu chấm) ===
+set "extList=txt cpp md"
+
+:: === Xóa file đầu ra nếu đã tồn tại ===
+if exist "%output%" del "%output%"
+
+echo @echo off > "%output%"
+echo rem === Tập lệnh khởi tạo cấu trúc thư mục và file trống === >> "%output%"
+
+:: === Ghi lệnh tạo thư mục ===
+for /r "%source%" %%d in (.) do (
+    set "relPath=%%~dpd"
+    set "relPath=!relPath:%source%=!"
+    if not "!relPath!"=="" (
+        echo mkdir ".\!relPath!" >> "%output%"
+    )
+)
+
+:: === Ghi lệnh tạo file trống theo loại ===
+for /r "%source%" %%f in (*) do (
+    set "ext=%%~xf"
+    set "ext=!ext:~1!"  :: Bỏ dấu chấm ở đầu
+    for %%e in (%extList%) do (
+        if /i "!ext!"=="%%e" (
+            set "relFile=%%~dpf"
+            set "relFile=!relFile:%source%=!"
+            echo type nul ^> ".\!relFile!%%~nxf" >> "%output%"
+        )
+    )
+)
+
+echo Đã tạo tập lệnh: %output%
+pause
