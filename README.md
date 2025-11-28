@@ -1,13 +1,23 @@
 "Portrait of a German woman with blonde straight hair, blue eyes, fair skin, wearing a casual white blouse and jeans, natural light, realistic style."
+
 "Elegant German woman with shoulder-length brown hair, green eyes, oval face, wearing a business suit with a blazer and pencil skirt, modern office background."
+
 "Traditional German woman wearing a colorful Dirndl dress, braided blonde hair, smiling, standing in front of an Oktoberfest beer tent, vibrant colors."
+
 "German woman with short stylish haircut, gray eyes, sharp facial features, wearing a minimalist black turtleneck and jeans, urban street background."
+
 "Young German woman with wavy light brown hair, blue eyes, soft makeup, wearing a cozy wool sweater and scarf, autumn park setting."
+
 "Fashionable German woman with long blonde hair, fair skin, wearing a trench coat and leather boots, walking in a European city street, cinematic style."
+
 "German woman with sleek ponytail, green eyes, strong jawline, wearing a modern eco-friendly outfit in neutral tones, standing in a sustainable fashion store."
+
 "Smiling German woman with curly dark blonde hair, hazel eyes, wearing a casual summer dress, sitting at an outdoor café in Berlin."
+
 "German woman with straight platinum blonde hair, blue-gray eyes, wearing a chic evening gown, elegant jewelry, in a formal event setting."
+
 "Sporty German woman with short blonde hair, athletic build, wearing a tracksuit and sneakers, jogging in a modern city park, dynamic pose."
+
 
 =====================================================================
 
