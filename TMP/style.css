@@ -1,0 +1,32 @@
+body {
+	background-color: black;
+	margin: 100px;
+	padding: 0px;
+}
+
+#span-english {
+	font-size: 80px;
+	font-family: monospace;
+}
+
+#span-ipa {
+	font-size: 60px;
+	font-family: monospace;
+}
+
+#span-vietnamese {
+	font-size: 60px;
+	font-family: monospace;
+}
+
+#div-vocabulary-list {
+	padding: 0px;
+	margin: 10px 0px;	
+}
+
+.div-vocabulary {
+	font-size: 35px;
+	padding: 5px 15px;
+	margin: 7px;
+	font-family: monospace;
+}
